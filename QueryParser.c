@@ -60,8 +60,8 @@ void socket_recv(){
     if(length < 0) {} //TODO: ABORT
     else dataLength = length;
 }
-void send_socket(byte* response_data){
-    send(sock, response_data, 1, 0);
+void send_socket(byte* response_data, int length){
+    send(sock, response_data, length, 0);
 }
 void run(){
     socket_recv();
@@ -130,7 +130,7 @@ void run(){
         //TODO: System.out.println(Thread.currentThread().getName() + " DNS数据长度不匹配，Malformed Packet");
     }
 
-    // TODO：查询本地域名-IP映射
+    // 查询本地域名-IP映射
     char* ip = getIpByDomin(dnsQuestion.qname);
     if(strcmp(ip, "") != 0 && dnsQuestion.qtype == 1){
         //header
@@ -172,6 +172,7 @@ void run(){
         for (int i = 0; i < strlen(nsDNSRRByteArray); i++) {
             response_data[responseOffset++] = nsDNSRRByteArray[i];
         }
+        send_socket(response_data, responseOffset);
     }
     else{ //TODO: 本地未检索到，请求因特网DNS服务器
 

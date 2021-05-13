@@ -7,6 +7,9 @@
 
 #endif //PROJECT_DNSQUESTION_H
 
+
+#include "Utils.h"
+
 struct DNSQuestion {
     /**
 	 * Question 查询字段
@@ -31,3 +34,5 @@ struct DNSQuestion {
     /* QCLASS（2字节） */
     short qclass;
 };
+
+byte* questionToByteArray(struct DNSQuestion);

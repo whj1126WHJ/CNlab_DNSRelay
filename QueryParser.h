@@ -8,4 +8,4 @@
 #endif //PROJECT_QUERYPARSER_H
 
 
-#define DEFAULT_PORT 53
+#define SERV_PORT 53

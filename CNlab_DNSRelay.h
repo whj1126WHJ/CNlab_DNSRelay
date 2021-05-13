@@ -3,6 +3,14 @@
 
 #pragma once
 
-#include <iostream>
 
 // TODO: 在此处引用程序需要的其他标头。
+
+
+typedef struct node{
+    char* ip;
+    char* domin;
+    struct node* next;
+}mapNode;
+
+char* getIpByDomin(char* qname);

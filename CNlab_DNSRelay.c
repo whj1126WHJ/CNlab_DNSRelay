@@ -2,10 +2,20 @@
 //
 
 #include "CNlab_DNSRelay.h"
-#include<stdio.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 
-int main()
+static mapNode* map;
+int main(int argc, char** argv)
 {
-	
+    printf("hello CN_lab");
+    char fileName[1024];
+    map = (mapNode*)malloc(sizeof(mapNode));
+    if(argc < 1){
+        printf("请输入映射表文件\n");
+    }else{
+        strcpy(fileName, argv[0]);
+    }
 	return 0;
 }

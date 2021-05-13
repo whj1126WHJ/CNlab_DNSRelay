@@ -5,6 +5,10 @@
 #ifndef PROJECT_DNSRR_H
 #define PROJECT_DNSRR_H
 
+#endif //PROJECT_DNSRR_H
+
+#include "Utils.h"
+
 struct DNSRR{
     /**
 	 * Answer/Authority/Additional
@@ -47,4 +51,6 @@ struct DNSRR{
     /* RDATA IPv4为4字节*/
     char rdata[1024];
 };
-#endif //PROJECT_DNSRR_H
+
+byte* RRToByteArray(struct DNSRR);
+

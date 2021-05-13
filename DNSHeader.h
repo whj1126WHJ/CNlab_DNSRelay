@@ -7,6 +7,7 @@
 
 #endif //PROJECT_DNSHEADER_H
 
+#include "Utils.h"
 /*
 	 * DNS Header
 	    0  1  2  3  4  5  6  7  0  1  2  3  4  5  6  7
@@ -44,3 +45,5 @@ struct DNSHeader {
     /* ARCOUNT（2字节）*/
     short arcount;
 };
+
+byte* headerToByteArray(struct DNSHeader);

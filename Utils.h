@@ -7,9 +7,12 @@
 
 #endif //PROJECT_UTILS_H
 
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
 typedef char byte;
 
-short byteArrayToShort(byte* b);
+short byteArrayToShort1(byte* b);
 
 short byteArrayToShort_offset(byte* b, int offset);
 
@@ -34,3 +37,5 @@ char* extractDomain(byte* bytes, int offset, int stopByte);
 byte* domainToByteArray(char* domain);
 
 byte* ipv4ToByteArray(char* ipv4);
+
+int split(char *src,const char *separator,char **dest);

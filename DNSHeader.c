@@ -7,7 +7,7 @@
 byte* headerToByteArray(struct DNSHeader dnsHeader) {
     byte *data = (byte*) malloc(sizeof(byte)*12);
     int offset = 0;
-    byte *byte_2 = (byte*) malloc(sizeof(byte)*2);
+    byte *byte_2;
     byte_2 = shortToByteArray(dnsHeader.transID);
     for (int i=0; i<2; i++) {
         data[offset++] = byte_2[i];

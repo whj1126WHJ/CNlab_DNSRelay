@@ -9,3 +9,5 @@
 
 
 #define SERV_PORT 53
+
+void run();

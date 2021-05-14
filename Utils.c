@@ -7,7 +7,7 @@
 /**
      * 一维字节数组转 short 值(2 字节)
      */
-short byteArrayToShort1(byte* b) {
+short byteArrayToShort(byte* b) {
     return byteArrayToShort_offset(b, 0);
 }
 

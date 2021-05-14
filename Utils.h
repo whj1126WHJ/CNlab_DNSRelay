@@ -12,7 +12,7 @@
 #include <stdio.h>
 typedef char byte;
 
-short byteArrayToShort1(byte* b);
+short byteArrayToShort(byte* b);
 
 short byteArrayToShort_offset(byte* b, int offset);
 

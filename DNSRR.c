@@ -5,10 +5,10 @@
 #include "DNSRR.h"
 
 byte* RRToByteArray(struct DNSRR dnsrr) {
-    byte *data = (byte*)malloc(sizeof(byte)*(strlen(dnsrr.rdlength) + 12));
+    byte *data = (byte*)malloc(sizeof(byte)*(dnsrr.rdlength + 12));
     int offset = 0;
-    byte *byte_2 = (byte*) malloc(sizeof(byte)*2);
-    byte *byte_4 = (byte*) malloc(sizeof(byte)*4);
+    byte *byte_2;
+    byte *byte_4;
     byte_2 = shortToByteArray(dnsrr.aname);
     for (int i=0; i<2; i++) {
         data[offset++] = byte_2[i];

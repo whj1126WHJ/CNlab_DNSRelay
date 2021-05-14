@@ -13,6 +13,8 @@
 #include "DNSRR.h"
 #include "CNlab_DNSRelay.h"
 
+#include <stdio.h>
+
 #ifdef _WIN32 /* for Windows Visual Studio */
 
 #include <winsock.h>
@@ -42,16 +44,23 @@ struct sockaddr_in servaddr;
 void socket_recv(){
     sockfd = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
     /* 填充struct sockaddr_in */
-    bzero(&servaddr, sizeof(servaddr));
+    memset(&servaddr, 0, sizeof(servaddr));
     servaddr.sin_family = AF_INET;
-    servaddr.sin_port = htons(SERV_PORT);
-    inet_pton(AF_INET, "127.0.0.1", &servaddr.sin_addr);
+    servaddr.sin_port = htons(53);
+    servaddr.sin_addr.s_addr = inet_addr("127.0.0.1");
+//    bind(sockfd, (struct sockaddr*)&servaddr, sizeof(servaddr));
     //TODO: if(sockfd < 0)
+//    int res = bind(sockfd, (struct sockaddr*)&servaddr, sizeof(servaddr));
 
-    if(bind(sockfd, (struct sockaddr*)&servaddr, sizeof(servaddr)) < 0){
+    if(connect(sockfd, (struct sockaddr*)&servaddr, sizeof(servaddr)) < 0){
         //TODO: ABORT
+        printf("bind_failed\n");
     }
-    listen(sockfd, 5);
+//    if(bind(sockfd, (struct sockaddr*)&servaddr, sizeof(servaddr)) < 0){
+//        //TODO: ABORT
+//        printf("bind_failed\n");
+//    }
+    listen(sockfd, SOMAXCONN);
 
     sock = accept(sockfd, 0, 0); //TODO: 监听客户端ip及端口
     if(sock < 0){} //TODO: ABORT  failed
@@ -132,6 +141,7 @@ void run(){
 
     // 查询本地域名-IP映射
     char* ip = getIpByDomin(dnsQuestion.qname);
+    printf("本地查找结果 domain: %s QTYPE: %d ip: %s\n", dnsQuestion.qname, dnsQuestion.qtype, ip);
     if(strcmp(ip, "") != 0 && dnsQuestion.qtype == 1){
         //header
         short flags = 0;
@@ -173,6 +183,7 @@ void run(){
             response_data[responseOffset++] = nsDNSRRByteArray[i];
         }
         send_socket(response_data, responseOffset);
+        printf("获得socket，响应 %s : %s\n", dnsQuestion.qname, ip);
     }
     else{ //TODO: 本地未检索到，请求因特网DNS服务器
 

@@ -34,8 +34,7 @@
 
 
 #endif
-static byte data[1024];
-static int dataLength;
+
 
 static int sock;
 
@@ -121,7 +120,7 @@ void run(){
 
     // 获取查询的域名
     if (dnsHeader.qdcount > 0) { // qdcount通常为1
-        char* domainName = extractDomain(data, offset, 0x00);
+        char* domainName = extractDomain(data, &offset, 0x00);
         strcpy(dnsQuestion.qname, domainName);
         offset += strlen(domainName) + 2;
 

@@ -32,7 +32,7 @@ char* byteArrayToHexString (byte* bytes);
 
 char* byteArrayToAscii(byte* bytes, int offset, int dataLen);
 
-char* extractDomain(byte* bytes, int offset, int stopByte);
+char* extractDomain(byte* bytes, int* offset, int stopByte);
 
 byte* domainToByteArray(char* domain);
 

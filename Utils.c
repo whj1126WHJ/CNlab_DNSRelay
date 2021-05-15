@@ -3,6 +3,7 @@
 //
 
 #include "Utils.h"
+#include "QueryParser.h"
 
 /**
      * 一维字节数组转 short 值(2 字节)
@@ -121,14 +122,14 @@ char* byteArrayToAscii(byte* bytes, int offset, int dataLen) {
 /**
     * 从字节数组中提取出域名
     */
-char* extractDomain(byte* bytes, int offset, int stopByte) {
+char* extractDomain(byte* bytes, int* offset, int stopByte) {
     char* stringBuffer = (char*) malloc(sizeof(char)*20);
     int subLen = 0;
-    while (offset < strlen(bytes) && byteToInt(bytes[offset]) != stopByte) {
-        subLen = byteToInt(bytes[offset++]);
+    while (*offset < dataLength && byteToInt(bytes[*offset]) != stopByte) {
+        subLen = byteToInt(bytes[(*offset)++]);
         strcat(stringBuffer, bytes);
         offset += subLen;
-        if(offset < strlen(bytes) && byteToInt(bytes[offset]) != stopByte) {
+        if(*offset < dataLength && byteToInt(bytes[*offset]) != stopByte) {
             strcat(stringBuffer, ".");
         }
     }

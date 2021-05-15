@@ -8,6 +8,10 @@
 #endif //PROJECT_QUERYPARSER_H
 
 
+#include "Utils.h"
 #define SERV_PORT 53
+
+byte data[1024];
+int dataLength;
 
 void run();

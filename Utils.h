@@ -30,12 +30,14 @@ char* byteToHexString (byte b);
 
 char* byteArrayToHexString (byte* bytes);
 
-char* byteArrayToAscii(byte* bytes, int offset, int dataLen);
+char* byteArrayToAscii(byte* bytes, int offset, int dataLen, int len);
 
-char* extractDomain(byte* bytes, int* offset, int stopByte);
+char* extractDomain(byte* bytes, int offset, int stopByte, int len);
 
 byte* domainToByteArray(char* domain);
 
 byte* ipv4ToByteArray(char* ipv4);
 
 int split(char *src,const char *separator,char **dest);
+
+void cStrcat(char* stringBuffe, byte *dat, int offset);

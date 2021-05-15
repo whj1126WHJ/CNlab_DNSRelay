@@ -42,7 +42,7 @@ int main(int argc, char** argv)
     readin(fileName);
     run();
 
-	return 0;
+    return 0;
 }
 
 

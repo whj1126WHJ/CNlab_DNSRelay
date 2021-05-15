@@ -42,30 +42,32 @@ static int sock;
 int sockfd;
 struct sockaddr_in servaddr;
 void socket_recv(){
-    sockfd = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
+    sockfd = socket(PF_INET, SOCK_DGRAM, 0);
     /* 填充struct sockaddr_in */
     memset(&servaddr, 0, sizeof(servaddr));
     servaddr.sin_family = AF_INET;
     servaddr.sin_port = htons(53);
-    servaddr.sin_addr.s_addr = inet_addr("127.0.0.1");
+//    servaddr.sin_addr.s_addr = inet_addr("127.0.0.1");
+    servaddr.sin_addr.s_addr = htonl(INADDR_ANY);
 //    bind(sockfd, (struct sockaddr*)&servaddr, sizeof(servaddr));
     //TODO: if(sockfd < 0)
 //    int res = bind(sockfd, (struct sockaddr*)&servaddr, sizeof(servaddr));
 
-    if(connect(sockfd, (struct sockaddr*)&servaddr, sizeof(servaddr)) < 0){
-        //TODO: ABORT
-        printf("bind_failed\n");
-    }
-//    if(bind(sockfd, (struct sockaddr*)&servaddr, sizeof(servaddr)) < 0){
+//    if(connect(sockfd, (struct sockaddr*)&servaddr, sizeof(servaddr)) < 0){
 //        //TODO: ABORT
 //        printf("bind_failed\n");
 //    }
-    listen(sockfd, SOMAXCONN);
+    if(bind(sockfd, (struct sockaddr*)&servaddr, sizeof(servaddr)) < 0){
+        //TODO: ABORT
+        printf("bind_failed\n");
+    }
+//    listen(sockfd, SOMAXCONN);
 
-    sock = accept(sockfd, 0, 0); //TODO: 监听客户端ip及端口
-    if(sock < 0){} //TODO: ABORT  failed
-
-    ssize_t length = recv(sock, data, sizeof(data), 0);
+//    sock = accept(sockfd, 0, 0); //TODO: 监听客户端ip及端口
+//    if(sock < 0){} //TODO: ABORT  failed
+    socklen_t addrLength = sizeof(addrLength);
+    int length = recvfrom(sockfd, data, sizeof(data), 0,
+                          (struct sockaddr *)&servaddr, &addrLength);
     if(length < 0) {} //TODO: ABORT
     else dataLength = length;
 }

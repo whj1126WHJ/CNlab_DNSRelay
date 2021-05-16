@@ -101,36 +101,31 @@ char* byteArrayToHexString (byte* bytes) {
 /**
      * 一维字节数组转化为Ascii对应的字符串
      */
-char* byteArrayToAscii(byte* bytes, int offset, int dataLen) {
+char* byteArrayToAscii(byte* bytes, int offset, int dataLen, int len) {
     if ((bytes == NULL) || (strlen(bytes) == 0) || (offset < 0) || (dataLen <= 0)
-        || (offset + dataLen > strlen(bytes))) {
+        || (offset + dataLen > len)) {
         return NULL;
     }
     byte *data = (byte*) malloc(sizeof(byte)*dataLen);
-    memcpy(data, bytes, dataLen);
-    /*
-    asciiStr = new String(data, "ISO8859-1");
-    try {
-        asciiStr = new String(data, "ISO8859-1");
-    } catch (Exception e) {
-        System.out.println("编码异常");
+    for(int i = 0; i < dataLen; i++) {
+        data[i] = bytes[i+offset];
     }
-     */
     return data;
 }
 
 /**
     * 从字节数组中提取出域名
     */
-char* extractDomain(byte* bytes, int* offset, int stopByte) {
-    char* stringBuffer = (char*) malloc(sizeof(char)*20);
-    int subLen = 0;
-    while (*offset < dataLength && byteToInt(bytes[*offset]) != stopByte) {
-        subLen = byteToInt(bytes[(*offset)++]);
-        strcat(stringBuffer, bytes);
+char* extractDomain(byte* bytes, int offset, int stopByte, int len) {
+    char* stringBuffer = (char*) malloc(sizeof(char)*50);
+    int subLen =  0;
+    while (offset < dataLength && byteToInt(data[offset]) != stopByte) {
+        subLen = byteToInt(data[(offset)++]);
+        char *tem = byteArrayToAscii(bytes, offset, subLen, len);
+        cStrcat(stringBuffer, tem, offset);
         offset += subLen;
-        if(*offset < dataLength && byteToInt(bytes[*offset]) != stopByte) {
-            strcat(stringBuffer, ".");
+        if(offset < dataLength && byteToInt(data[offset]) != stopByte) {
+            cStrcat(stringBuffer, ".", offset);
         }
     }
     return stringBuffer;
@@ -208,4 +203,14 @@ int split(char *src,const char *separator,char **dest) {
         pNext = (char *)strtok(NULL,separator);  //必须使用(char *)进行强制类型转换
     }
     return count;
+}
+
+void cStrcat(char* stringBuffe, byte *dat, offset) {
+    int i = 0;
+    for(i = 0; stringBuffe[i]; i++) {
+
+    }
+    for(int j = 0; dat[j]; j++) {
+        stringBuffe[i+j] = dat[j];
+    }
 }

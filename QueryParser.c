@@ -37,7 +37,7 @@
 
 
 static int sock;
-
+int len = 0;
 int sockfd;
 struct sockaddr_in servaddr;
 void socket_recv(){
@@ -80,6 +80,13 @@ void run(){
 
     struct DNSHeader dnsHeader;
     struct DNSQuestion dnsQuestion;
+    int flag = 0;
+    for(int i = 1024-1; i >= 0; i--) {
+        if(data[i])
+            flag = 1;
+        if(flag)
+            len++;
+    }
 
     //处理DNS协议头
     for (int i = 0; i < 2; i++) {
@@ -120,10 +127,9 @@ void run(){
 
     // 获取查询的域名
     if (dnsHeader.qdcount > 0) { // qdcount通常为1
-        char* domainName = extractDomain(data, &offset, 0x00);
-        strcpy(dnsQuestion.qname, domainName);
+        char* domainName = extractDomain(data, offset, 0x00, len);
+        cStrcat(dnsQuestion.qname, domainName, 0);
         offset += strlen(domainName) + 2;
-
         for (int j = 0; j < 2; j++) {
             buff_2[j] = data[j + offset];
         }
@@ -187,6 +193,5 @@ void run(){
         printf("获得socket，响应 %s : %s\n", dnsQuestion.qname, ip);
     }
     else{ //TODO: 本地未检索到，请求因特网DNS服务器
-
     }
 }

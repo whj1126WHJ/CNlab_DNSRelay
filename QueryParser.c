@@ -39,7 +39,10 @@
 static int sock;
 int len = 0;
 int sockfd;
-struct sockaddr_in servaddr;
+struct sockaddr_in servaddr = {};
+
+char* clientIp[32];
+
 void socket_recv(){
     sockfd = socket(PF_INET, SOCK_DGRAM, 0);
     /* 填充struct sockaddr_in */
@@ -69,17 +72,22 @@ void socket_recv(){
                           (struct sockaddr *)&servaddr, &addrLength);
     if(length < 0) {} //TODO: ABORT
     else dataLength = length;
+
+
+    //test:
+    printf("IP:%s\n", (char *)inet_ntoa(servaddr.sin_addr));
+    printf("Port:%d\n", htons(servaddr.sin_port));
 }
 void send_socket(byte* response_data, int length){
-    send(sock, response_data, length, 0);
+    sendto(sockfd, response_data, length, 0, (struct sockaddr*)&servaddr, sizeof(servaddr));
 }
 void run(){
     socket_recv();
     byte buff_2[2];
     int offset = 0;
 
-    struct DNSHeader dnsHeader;
-    struct DNSQuestion dnsQuestion;
+    struct DNSHeader dnsHeader = {};
+    struct DNSQuestion dnsQuestion = {};
     int flag = 0;
     for(int i = 1024-1; i >= 0; i--) {
         if(data[i])
@@ -165,28 +173,31 @@ void run(){
 
         //answer
         struct DNSRR anDNSRR = {(short) 0xc00c, dnsQuestion.qtype, dnsQuestion.qclass, 3600*24, (short) 4};
+        anDNSRR.rdata = (char*)malloc(sizeof(char) * strlen(ip));
         strcpy(anDNSRR.rdata, ip);
         byte* anDNSRRByteArray = RRToByteArray(anDNSRR);
-
+        int anDNSRRlength = rrLength;
         // Authoritative nameservers 只是模拟了包格式，nameserver实际指向了查询的域名
         struct DNSRR nsDNSRR = {(short) 0xc00c, (short) 6, dnsQuestion.qclass, 3600*24, (short) 0};
-        strcpy(nsDNSRR.rdata, 0);
+        nsDNSRR.rdata = (char*)malloc(sizeof(char) * 0);
+        strcpy(nsDNSRR.rdata, "");
         byte* nsDNSRRByteArray = RRToByteArray(nsDNSRR);
+        int nsDNSRRlength = rrLength;
 
-        byte* response_data = (byte*)malloc(sizeof(byte) * (strlen(dnsHeaderByteArray) + strlen(dnsQuestionByteArray) + strlen(anDNSRRByteArray) + strlen(nsDNSRRByteArray)));
+        byte* response_data = (byte*)malloc(sizeof(byte) * (headerlength + questionLength + anDNSRRlength + nsDNSRRlength));
         int responseOffset = 0;
-        for (int i = 0; i < strlen(dnsHeaderByteArray); i++) {
+        for (int i = 0; i < headerlength; i++) {
             response_data[responseOffset++] = dnsHeaderByteArray[i];
         }
-        for (int i = 0; i < strlen(dnsQuestionByteArray); i++) {
+        for (int i = 0; i < questionLength; i++) {
             response_data[responseOffset++] = dnsQuestionByteArray[i];
         }
         if (strcmp(ip, "0.0.0.0") != 0) {
-            for (int i = 0; i < strlen(anDNSRRByteArray); i++) {
+            for (int i = 0; i < anDNSRRlength; i++) {
                 response_data[responseOffset++] = anDNSRRByteArray[i];
             }
         }
-        for (int i = 0; i < strlen(nsDNSRRByteArray); i++) {
+        for (int i = 0; i < nsDNSRRlength; i++) {
             response_data[responseOffset++] = nsDNSRRByteArray[i];
         }
         send_socket(response_data, responseOffset);

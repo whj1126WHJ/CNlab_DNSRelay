@@ -32,5 +32,6 @@ byte* headerToByteArray(struct DNSHeader dnsHeader) {
     for (int i=0; i<2; i++) {
         data[offset++] = byte_2[i];
     }
+    headerlength = offset;
     return data;
 }

@@ -1,4 +1,4 @@
-/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/whjandhisstars/CLionProjects/CNlab_DNSRelay_whj
+"/Users/wangqiankai/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/211.6693.114/CLion.app/Contents/bin/cmake/mac/bin/cmake" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/wangqiankai/2021计网课设/CNlab_DNSRelay
 -- The C compiler identification is AppleClang 12.0.5.12050022
 -- The CXX compiler identification is AppleClang 12.0.5.12050022
 -- Detecting C compiler ABI info
@@ -13,4 +13,4 @@
 -- Detecting CXX compile features - done
 -- Configuring done
 -- Generating done
--- Build files have been written to: /Users/whjandhisstars/CLionProjects/CNlab_DNSRelay_whj/cmake-build-debug
+-- Build files have been written to: /Users/wangqiankai/2021计网课设/CNlab_DNSRelay/cmake-build-debug

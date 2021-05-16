@@ -35,6 +35,7 @@ byte* RRToByteArray(struct DNSRR dnsrr) {
             data[offset++] = byte_4[i];
         }
     }
+    rrLength = offset;
     return data;
 
 }

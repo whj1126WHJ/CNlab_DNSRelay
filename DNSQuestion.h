@@ -35,4 +35,5 @@ struct DNSQuestion {
     short qclass;
 };
 
+int questionLength;
 byte* questionToByteArray(struct DNSQuestion);

@@ -49,8 +49,8 @@ struct DNSRR{
     short rdlength;
 
     /* RDATA IPv4为4字节*/
-    char rdata[1024];
+    char* rdata;
 };
-
+int rrLength;
 byte* RRToByteArray(struct DNSRR);
 

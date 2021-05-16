@@ -4,12 +4,12 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/Users/whjandhisstars/CLionProjects/CNlab_DNSRelay_whj/CNlab_DNSRelay.c" "/Users/whjandhisstars/CLionProjects/CNlab_DNSRelay_whj/cmake-build-debug/CMakeFiles/CNlab_DNSRelay.dir/CNlab_DNSRelay.c.o"
-  "/Users/whjandhisstars/CLionProjects/CNlab_DNSRelay_whj/DNSHeader.c" "/Users/whjandhisstars/CLionProjects/CNlab_DNSRelay_whj/cmake-build-debug/CMakeFiles/CNlab_DNSRelay.dir/DNSHeader.c.o"
-  "/Users/whjandhisstars/CLionProjects/CNlab_DNSRelay_whj/DNSQuestion.c" "/Users/whjandhisstars/CLionProjects/CNlab_DNSRelay_whj/cmake-build-debug/CMakeFiles/CNlab_DNSRelay.dir/DNSQuestion.c.o"
-  "/Users/whjandhisstars/CLionProjects/CNlab_DNSRelay_whj/DNSRR.c" "/Users/whjandhisstars/CLionProjects/CNlab_DNSRelay_whj/cmake-build-debug/CMakeFiles/CNlab_DNSRelay.dir/DNSRR.c.o"
-  "/Users/whjandhisstars/CLionProjects/CNlab_DNSRelay_whj/QueryParser.c" "/Users/whjandhisstars/CLionProjects/CNlab_DNSRelay_whj/cmake-build-debug/CMakeFiles/CNlab_DNSRelay.dir/QueryParser.c.o"
-  "/Users/whjandhisstars/CLionProjects/CNlab_DNSRelay_whj/Utils.c" "/Users/whjandhisstars/CLionProjects/CNlab_DNSRelay_whj/cmake-build-debug/CMakeFiles/CNlab_DNSRelay.dir/Utils.c.o"
+  "/Users/wangqiankai/2021计网课设/CNlab_DNSRelay/CNlab_DNSRelay.c" "/Users/wangqiankai/2021计网课设/CNlab_DNSRelay/cmake-build-debug/CMakeFiles/CNlab_DNSRelay.dir/CNlab_DNSRelay.c.o"
+  "/Users/wangqiankai/2021计网课设/CNlab_DNSRelay/DNSHeader.c" "/Users/wangqiankai/2021计网课设/CNlab_DNSRelay/cmake-build-debug/CMakeFiles/CNlab_DNSRelay.dir/DNSHeader.c.o"
+  "/Users/wangqiankai/2021计网课设/CNlab_DNSRelay/DNSQuestion.c" "/Users/wangqiankai/2021计网课设/CNlab_DNSRelay/cmake-build-debug/CMakeFiles/CNlab_DNSRelay.dir/DNSQuestion.c.o"
+  "/Users/wangqiankai/2021计网课设/CNlab_DNSRelay/DNSRR.c" "/Users/wangqiankai/2021计网课设/CNlab_DNSRelay/cmake-build-debug/CMakeFiles/CNlab_DNSRelay.dir/DNSRR.c.o"
+  "/Users/wangqiankai/2021计网课设/CNlab_DNSRelay/QueryParser.c" "/Users/wangqiankai/2021计网课设/CNlab_DNSRelay/cmake-build-debug/CMakeFiles/CNlab_DNSRelay.dir/QueryParser.c.o"
+  "/Users/wangqiankai/2021计网课设/CNlab_DNSRelay/Utils.c" "/Users/wangqiankai/2021计网课设/CNlab_DNSRelay/cmake-build-debug/CMakeFiles/CNlab_DNSRelay.dir/Utils.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 

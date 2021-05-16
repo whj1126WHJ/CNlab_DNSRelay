@@ -46,4 +46,5 @@ struct DNSHeader {
     short arcount;
 };
 
+int headerlength;
 byte* headerToByteArray(struct DNSHeader);

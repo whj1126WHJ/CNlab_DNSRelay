@@ -21,8 +21,10 @@ void readin(char* fileName){
         char *ip = strsep(&buff, " ");
         char *domin = strsep(&buff, "\r\n");
         root -> next = (mapNode*)malloc(sizeof(mapNode));
-        root -> next -> ip = ip;
-        root -> next -> domin = domin;
+        root -> next -> ip = (char*)malloc(sizeof(char) * strlen(ip));
+        strcpy(root -> next -> ip, ip);
+        root -> next -> domin = (char*)malloc(sizeof(char) * strlen(domin));
+        strcpy(root -> next -> domin, domin);
         root = root -> next;
         count++;
     }
@@ -47,12 +49,15 @@ int main(int argc, char** argv)
 
 
 char* getIpByDomin(char* qname){
+    char* res = NULL;
     mapNode* root = map -> next;
     while(root){
         if(!strcmp(qname, root ->domin)){
-            return root -> ip;
+            res = (char*)malloc(sizeof(char) * strlen(root -> ip));
+            strcpy(res, root -> ip);
+            return res;
         }
         root = root -> next;
     }
-    return NULL;
+    return res;
 }

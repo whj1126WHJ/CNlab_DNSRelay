@@ -53,19 +53,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = "/Users/wangqiankai/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/211.6693.114/CLion.app/Contents/bin/cmake/mac/bin/cmake"
 
 # The command to remove a file.
-RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
+RM = "/Users/wangqiankai/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/211.6693.114/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/whjandhisstars/CLionProjects/CNlab_DNSRelay_whj
+CMAKE_SOURCE_DIR = /Users/wangqiankai/2021计网课设/CNlab_DNSRelay
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/whjandhisstars/CLionProjects/CNlab_DNSRelay_whj/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/wangqiankai/2021计网课设/CNlab_DNSRelay/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/CNlab_DNSRelay.dir/depend.make
@@ -78,81 +78,81 @@ include CMakeFiles/CNlab_DNSRelay.dir/flags.make
 
 CMakeFiles/CNlab_DNSRelay.dir/CNlab_DNSRelay.c.o: CMakeFiles/CNlab_DNSRelay.dir/flags.make
 CMakeFiles/CNlab_DNSRelay.dir/CNlab_DNSRelay.c.o: ../CNlab_DNSRelay.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/whjandhisstars/CLionProjects/CNlab_DNSRelay_whj/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/CNlab_DNSRelay.dir/CNlab_DNSRelay.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/CNlab_DNSRelay.dir/CNlab_DNSRelay.c.o -c /Users/whjandhisstars/CLionProjects/CNlab_DNSRelay_whj/CNlab_DNSRelay.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wangqiankai/2021计网课设/CNlab_DNSRelay/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/CNlab_DNSRelay.dir/CNlab_DNSRelay.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/CNlab_DNSRelay.dir/CNlab_DNSRelay.c.o -c /Users/wangqiankai/2021计网课设/CNlab_DNSRelay/CNlab_DNSRelay.c
 
 CMakeFiles/CNlab_DNSRelay.dir/CNlab_DNSRelay.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/CNlab_DNSRelay.dir/CNlab_DNSRelay.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/whjandhisstars/CLionProjects/CNlab_DNSRelay_whj/CNlab_DNSRelay.c > CMakeFiles/CNlab_DNSRelay.dir/CNlab_DNSRelay.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/wangqiankai/2021计网课设/CNlab_DNSRelay/CNlab_DNSRelay.c > CMakeFiles/CNlab_DNSRelay.dir/CNlab_DNSRelay.c.i
 
 CMakeFiles/CNlab_DNSRelay.dir/CNlab_DNSRelay.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/CNlab_DNSRelay.dir/CNlab_DNSRelay.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/whjandhisstars/CLionProjects/CNlab_DNSRelay_whj/CNlab_DNSRelay.c -o CMakeFiles/CNlab_DNSRelay.dir/CNlab_DNSRelay.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/wangqiankai/2021计网课设/CNlab_DNSRelay/CNlab_DNSRelay.c -o CMakeFiles/CNlab_DNSRelay.dir/CNlab_DNSRelay.c.s
 
 CMakeFiles/CNlab_DNSRelay.dir/QueryParser.c.o: CMakeFiles/CNlab_DNSRelay.dir/flags.make
 CMakeFiles/CNlab_DNSRelay.dir/QueryParser.c.o: ../QueryParser.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/whjandhisstars/CLionProjects/CNlab_DNSRelay_whj/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/CNlab_DNSRelay.dir/QueryParser.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/CNlab_DNSRelay.dir/QueryParser.c.o -c /Users/whjandhisstars/CLionProjects/CNlab_DNSRelay_whj/QueryParser.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wangqiankai/2021计网课设/CNlab_DNSRelay/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/CNlab_DNSRelay.dir/QueryParser.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/CNlab_DNSRelay.dir/QueryParser.c.o -c /Users/wangqiankai/2021计网课设/CNlab_DNSRelay/QueryParser.c
 
 CMakeFiles/CNlab_DNSRelay.dir/QueryParser.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/CNlab_DNSRelay.dir/QueryParser.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/whjandhisstars/CLionProjects/CNlab_DNSRelay_whj/QueryParser.c > CMakeFiles/CNlab_DNSRelay.dir/QueryParser.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/wangqiankai/2021计网课设/CNlab_DNSRelay/QueryParser.c > CMakeFiles/CNlab_DNSRelay.dir/QueryParser.c.i
 
 CMakeFiles/CNlab_DNSRelay.dir/QueryParser.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/CNlab_DNSRelay.dir/QueryParser.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/whjandhisstars/CLionProjects/CNlab_DNSRelay_whj/QueryParser.c -o CMakeFiles/CNlab_DNSRelay.dir/QueryParser.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/wangqiankai/2021计网课设/CNlab_DNSRelay/QueryParser.c -o CMakeFiles/CNlab_DNSRelay.dir/QueryParser.c.s
 
 CMakeFiles/CNlab_DNSRelay.dir/Utils.c.o: CMakeFiles/CNlab_DNSRelay.dir/flags.make
 CMakeFiles/CNlab_DNSRelay.dir/Utils.c.o: ../Utils.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/whjandhisstars/CLionProjects/CNlab_DNSRelay_whj/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/CNlab_DNSRelay.dir/Utils.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/CNlab_DNSRelay.dir/Utils.c.o -c /Users/whjandhisstars/CLionProjects/CNlab_DNSRelay_whj/Utils.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wangqiankai/2021计网课设/CNlab_DNSRelay/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/CNlab_DNSRelay.dir/Utils.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/CNlab_DNSRelay.dir/Utils.c.o -c /Users/wangqiankai/2021计网课设/CNlab_DNSRelay/Utils.c
 
 CMakeFiles/CNlab_DNSRelay.dir/Utils.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/CNlab_DNSRelay.dir/Utils.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/whjandhisstars/CLionProjects/CNlab_DNSRelay_whj/Utils.c > CMakeFiles/CNlab_DNSRelay.dir/Utils.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/wangqiankai/2021计网课设/CNlab_DNSRelay/Utils.c > CMakeFiles/CNlab_DNSRelay.dir/Utils.c.i
 
 CMakeFiles/CNlab_DNSRelay.dir/Utils.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/CNlab_DNSRelay.dir/Utils.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/whjandhisstars/CLionProjects/CNlab_DNSRelay_whj/Utils.c -o CMakeFiles/CNlab_DNSRelay.dir/Utils.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/wangqiankai/2021计网课设/CNlab_DNSRelay/Utils.c -o CMakeFiles/CNlab_DNSRelay.dir/Utils.c.s
 
 CMakeFiles/CNlab_DNSRelay.dir/DNSHeader.c.o: CMakeFiles/CNlab_DNSRelay.dir/flags.make
 CMakeFiles/CNlab_DNSRelay.dir/DNSHeader.c.o: ../DNSHeader.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/whjandhisstars/CLionProjects/CNlab_DNSRelay_whj/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/CNlab_DNSRelay.dir/DNSHeader.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/CNlab_DNSRelay.dir/DNSHeader.c.o -c /Users/whjandhisstars/CLionProjects/CNlab_DNSRelay_whj/DNSHeader.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wangqiankai/2021计网课设/CNlab_DNSRelay/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/CNlab_DNSRelay.dir/DNSHeader.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/CNlab_DNSRelay.dir/DNSHeader.c.o -c /Users/wangqiankai/2021计网课设/CNlab_DNSRelay/DNSHeader.c
 
 CMakeFiles/CNlab_DNSRelay.dir/DNSHeader.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/CNlab_DNSRelay.dir/DNSHeader.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/whjandhisstars/CLionProjects/CNlab_DNSRelay_whj/DNSHeader.c > CMakeFiles/CNlab_DNSRelay.dir/DNSHeader.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/wangqiankai/2021计网课设/CNlab_DNSRelay/DNSHeader.c > CMakeFiles/CNlab_DNSRelay.dir/DNSHeader.c.i
 
 CMakeFiles/CNlab_DNSRelay.dir/DNSHeader.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/CNlab_DNSRelay.dir/DNSHeader.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/whjandhisstars/CLionProjects/CNlab_DNSRelay_whj/DNSHeader.c -o CMakeFiles/CNlab_DNSRelay.dir/DNSHeader.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/wangqiankai/2021计网课设/CNlab_DNSRelay/DNSHeader.c -o CMakeFiles/CNlab_DNSRelay.dir/DNSHeader.c.s
 
 CMakeFiles/CNlab_DNSRelay.dir/DNSQuestion.c.o: CMakeFiles/CNlab_DNSRelay.dir/flags.make
 CMakeFiles/CNlab_DNSRelay.dir/DNSQuestion.c.o: ../DNSQuestion.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/whjandhisstars/CLionProjects/CNlab_DNSRelay_whj/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/CNlab_DNSRelay.dir/DNSQuestion.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/CNlab_DNSRelay.dir/DNSQuestion.c.o -c /Users/whjandhisstars/CLionProjects/CNlab_DNSRelay_whj/DNSQuestion.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wangqiankai/2021计网课设/CNlab_DNSRelay/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/CNlab_DNSRelay.dir/DNSQuestion.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/CNlab_DNSRelay.dir/DNSQuestion.c.o -c /Users/wangqiankai/2021计网课设/CNlab_DNSRelay/DNSQuestion.c
 
 CMakeFiles/CNlab_DNSRelay.dir/DNSQuestion.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/CNlab_DNSRelay.dir/DNSQuestion.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/whjandhisstars/CLionProjects/CNlab_DNSRelay_whj/DNSQuestion.c > CMakeFiles/CNlab_DNSRelay.dir/DNSQuestion.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/wangqiankai/2021计网课设/CNlab_DNSRelay/DNSQuestion.c > CMakeFiles/CNlab_DNSRelay.dir/DNSQuestion.c.i
 
 CMakeFiles/CNlab_DNSRelay.dir/DNSQuestion.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/CNlab_DNSRelay.dir/DNSQuestion.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/whjandhisstars/CLionProjects/CNlab_DNSRelay_whj/DNSQuestion.c -o CMakeFiles/CNlab_DNSRelay.dir/DNSQuestion.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/wangqiankai/2021计网课设/CNlab_DNSRelay/DNSQuestion.c -o CMakeFiles/CNlab_DNSRelay.dir/DNSQuestion.c.s
 
 CMakeFiles/CNlab_DNSRelay.dir/DNSRR.c.o: CMakeFiles/CNlab_DNSRelay.dir/flags.make
 CMakeFiles/CNlab_DNSRelay.dir/DNSRR.c.o: ../DNSRR.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/whjandhisstars/CLionProjects/CNlab_DNSRelay_whj/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/CNlab_DNSRelay.dir/DNSRR.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/CNlab_DNSRelay.dir/DNSRR.c.o -c /Users/whjandhisstars/CLionProjects/CNlab_DNSRelay_whj/DNSRR.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wangqiankai/2021计网课设/CNlab_DNSRelay/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/CNlab_DNSRelay.dir/DNSRR.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/CNlab_DNSRelay.dir/DNSRR.c.o -c /Users/wangqiankai/2021计网课设/CNlab_DNSRelay/DNSRR.c
 
 CMakeFiles/CNlab_DNSRelay.dir/DNSRR.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/CNlab_DNSRelay.dir/DNSRR.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/whjandhisstars/CLionProjects/CNlab_DNSRelay_whj/DNSRR.c > CMakeFiles/CNlab_DNSRelay.dir/DNSRR.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/wangqiankai/2021计网课设/CNlab_DNSRelay/DNSRR.c > CMakeFiles/CNlab_DNSRelay.dir/DNSRR.c.i
 
 CMakeFiles/CNlab_DNSRelay.dir/DNSRR.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/CNlab_DNSRelay.dir/DNSRR.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/whjandhisstars/CLionProjects/CNlab_DNSRelay_whj/DNSRR.c -o CMakeFiles/CNlab_DNSRelay.dir/DNSRR.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/wangqiankai/2021计网课设/CNlab_DNSRelay/DNSRR.c -o CMakeFiles/CNlab_DNSRelay.dir/DNSRR.c.s
 
 # Object files for target CNlab_DNSRelay
 CNlab_DNSRelay_OBJECTS = \
@@ -174,7 +174,7 @@ CNlab_DNSRelay: CMakeFiles/CNlab_DNSRelay.dir/DNSQuestion.c.o
 CNlab_DNSRelay: CMakeFiles/CNlab_DNSRelay.dir/DNSRR.c.o
 CNlab_DNSRelay: CMakeFiles/CNlab_DNSRelay.dir/build.make
 CNlab_DNSRelay: CMakeFiles/CNlab_DNSRelay.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/whjandhisstars/CLionProjects/CNlab_DNSRelay_whj/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C executable CNlab_DNSRelay"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/wangqiankai/2021计网课设/CNlab_DNSRelay/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C executable CNlab_DNSRelay"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/CNlab_DNSRelay.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -187,6 +187,6 @@ CMakeFiles/CNlab_DNSRelay.dir/clean:
 .PHONY : CMakeFiles/CNlab_DNSRelay.dir/clean
 
 CMakeFiles/CNlab_DNSRelay.dir/depend:
-	cd /Users/whjandhisstars/CLionProjects/CNlab_DNSRelay_whj/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/whjandhisstars/CLionProjects/CNlab_DNSRelay_whj /Users/whjandhisstars/CLionProjects/CNlab_DNSRelay_whj /Users/whjandhisstars/CLionProjects/CNlab_DNSRelay_whj/cmake-build-debug /Users/whjandhisstars/CLionProjects/CNlab_DNSRelay_whj/cmake-build-debug /Users/whjandhisstars/CLionProjects/CNlab_DNSRelay_whj/cmake-build-debug/CMakeFiles/CNlab_DNSRelay.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/wangqiankai/2021计网课设/CNlab_DNSRelay/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/wangqiankai/2021计网课设/CNlab_DNSRelay /Users/wangqiankai/2021计网课设/CNlab_DNSRelay /Users/wangqiankai/2021计网课设/CNlab_DNSRelay/cmake-build-debug /Users/wangqiankai/2021计网课设/CNlab_DNSRelay/cmake-build-debug /Users/wangqiankai/2021计网课设/CNlab_DNSRelay/cmake-build-debug/CMakeFiles/CNlab_DNSRelay.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/CNlab_DNSRelay.dir/depend
 

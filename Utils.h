@@ -10,7 +10,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
-typedef char byte;
+typedef unsigned char byte;
 
 short byteArrayToShort(byte* b);
 

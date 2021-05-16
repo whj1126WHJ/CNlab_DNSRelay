@@ -20,5 +20,6 @@ byte* questionToByteArray(struct DNSQuestion dnsQuestion) {
     for(int i = 0; i < 2; i ++) {
         data[offset++] = byte_2[i];
     }
+    questionLength = offset;
     return data;
 }

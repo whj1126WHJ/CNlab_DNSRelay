@@ -1,3 +1,3 @@
-/Users/whjandhisstars/CLionProjects/CNlab_DNSRelay_whj/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/whjandhisstars/CLionProjects/CNlab_DNSRelay_whj/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/whjandhisstars/CLionProjects/CNlab_DNSRelay_whj/cmake-build-debug/CMakeFiles/CNlab_DNSRelay.dir
+/Users/wangqiankai/2021计网课设/CNlab_DNSRelay/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/wangqiankai/2021计网课设/CNlab_DNSRelay/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/wangqiankai/2021计网课设/CNlab_DNSRelay/cmake-build-debug/CMakeFiles/CNlab_DNSRelay.dir
